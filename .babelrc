@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["env", { "modules": false }], // 使用最新的stage-2语法编译，不转化为其他模块规范.此处如果配置了env，要安装babel-preset-env。
+    "stage-2"
+  ],
+  "plugins": ["transform-runtime"], // 核心插件扩展常用es6功能
+  "comments": false,
+  "env": {
+    "test": { // 测试环境下babel配置
+      "presets": ["env", "stage-2"],
+      "plugins": [ "istanbul" ]
+    }
+  }
+}
